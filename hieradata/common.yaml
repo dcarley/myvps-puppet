@@ -1,0 +1,11 @@
+---
+
+packages:
+  - tmux
+  - irssi
+  - dnsutils
+  - netcat
+  - git
+  - whois
+
+classes: []

@@ -14,7 +14,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "private_network", ip: "172.16.16.10"
 
   config.vm.provision "puppet" do |puppet|
-    puppet.manifests_path = "manifests"
-    puppet.manifest_file  = "site.pp"
+    puppet.manifests_path    = "manifests"
+    puppet.manifest_file     = "site.pp"
+    puppet.hiera_config_path = "hiera.yaml"
+    puppet.working_directory = "/vagrant"
   end
 end
