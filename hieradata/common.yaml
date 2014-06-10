@@ -11,9 +11,21 @@ packages:
 classes:
   - apt
   - apt::unattended_upgrades
+  - nginx
   - ssh::client
   - ssh::server
 
 apt::always_apt_update: true
 apt::purge_preferences_d: true
 apt::purge_sources_list_d: true
+
+nginx::confd_purge: true
+nginx::manage_repo: false
+nginx::vhost_purge: true
+nginx::nginx_vhosts:
+  default:
+    listen_options: default
+    server_name: [_]
+    index_files: []
+    location_custom_cfg:
+      return: 200
