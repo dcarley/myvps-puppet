@@ -8,4 +8,10 @@ packages:
   - git
   - whois
 
-classes: []
+classes:
+  - apt
+  - apt::unattended_upgrades
+
+apt::always_apt_update: true
+apt::purge_preferences_d: true
+apt::purge_sources_list_d: true
