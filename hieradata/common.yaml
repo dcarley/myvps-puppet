@@ -11,6 +11,8 @@ packages:
 classes:
   - apt
   - apt::unattended_upgrades
+  - ssh::client
+  - ssh::server
 
 apt::always_apt_update: true
 apt::purge_preferences_d: true
