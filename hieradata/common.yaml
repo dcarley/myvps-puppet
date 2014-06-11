@@ -29,3 +29,13 @@ nginx::nginx_vhosts:
     index_files: []
     location_custom_cfg:
       return: 200
+  dan.carley.co:
+    www_root: /home/dan/public_www/dan.carley.co
+  carley.co:
+    server_name:
+      - carley.co
+      - www.carley.co
+    index_files: []
+    use_default_location: false
+    vhost_cfg_append:
+      return: '301 http://dan.carley.co$request_uri'
