@@ -20,6 +20,7 @@ classes:
   - private_hosting
   - ssh::client
   - ssh::server
+  - sudo
 
 accounts::managed:
   dan:
@@ -51,3 +52,9 @@ nginx::nginx_vhosts:
     use_default_location: false
     vhost_cfg_append:
       return: '301 http://dan.carley.co$request_uri'
+
+sudo::configs:
+  dan:
+    content: 'dan ALL=(ALL) NOPASSWD:ALL'
+  vagrant:
+    content: 'vagrant ALL=(ALL) NOPASSWD:ALL'
