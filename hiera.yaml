@@ -3,5 +3,9 @@
   - common
 :backends:
   - yaml
+  - gpg
 :yaml:
   :datadir: 'hieradata'
+:gpg:
+  :datadir: 'hieradata'
+  :key_dir: '.gnupg'

@@ -1,3 +1,4 @@
+.gnupg/
 hieradata/private.yaml
 .bundle/
 .vagrant/
