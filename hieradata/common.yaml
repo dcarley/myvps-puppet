@@ -11,6 +11,8 @@ packages:
 classes:
   - apt
   - apt::unattended_upgrades
+  - mysql::client
+  - mysql::server
   - nginx
   - private_hosting
   - ssh::client
@@ -19,6 +21,8 @@ classes:
 apt::always_apt_update: true
 apt::purge_preferences_d: true
 apt::purge_sources_list_d: true
+
+mysql::server::remove_default_accounts: true
 
 nginx::confd_purge: true
 nginx::manage_repo: false

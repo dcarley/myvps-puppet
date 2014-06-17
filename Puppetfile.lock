@@ -11,11 +11,14 @@ FORGE
       puppetlabs/stdlib (>= 2.2.1)
     puppetlabs/concat (1.1.0)
       puppetlabs/stdlib (>= 4.0.0)
+    puppetlabs/mysql (2.2.3)
+      puppetlabs/stdlib (>= 3.2.0)
     puppetlabs/stdlib (4.2.2)
 
 DEPENDENCIES
   attachmentgenie/ssh (>= 0)
   jfryman/nginx (>= 0)
   puppetlabs/apt (>= 0)
+  puppetlabs/mysql (>= 0)
   puppetlabs/stdlib (>= 0)
 
