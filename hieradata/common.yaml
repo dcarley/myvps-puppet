@@ -15,6 +15,7 @@ classes:
   - mysql::client
   - mysql::server
   - nginx
+  - ntp
   - php
   - php::libs
   - private_hosting
