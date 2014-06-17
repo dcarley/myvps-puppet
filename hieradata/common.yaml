@@ -44,7 +44,7 @@ nginx::nginx_vhosts:
     location_custom_cfg:
       return: 200
   dan.carley.co:
-    www_root: /home/dan/public_www/dan.carley.co
+    www_root: /srv/www/dan.carley.co
   carley.co:
     server_name:
       - carley.co
