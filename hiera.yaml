@@ -1,4 +1,5 @@
 :hierarchy:
+  - private
   - common
 :backends:
   - yaml

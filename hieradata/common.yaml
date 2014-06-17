@@ -12,6 +12,7 @@ classes:
   - apt
   - apt::unattended_upgrades
   - nginx
+  - private_hosting
   - ssh::client
   - ssh::server
 
