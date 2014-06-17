@@ -1,0 +1,12 @@
+#!/bin/bash
+set -eu
+
+cd "$(dirname $0)/.."
+puppet apply \
+  --modulepath=modules:vendor/modules \
+  --manifestdir=manifests \
+  --hiera_config=hiera.yaml \
+  --detailed-exitcodes \
+  --verbose \
+  manifests/site.pp || [ $? -eq 2 ]
+exit $?
