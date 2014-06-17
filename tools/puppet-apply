@@ -1,6 +1,11 @@
 #!/bin/bash
 set -eu
 
+if ! gem list -i hiera-gpg; then
+  apt-get install -qqy --no-reinstall ruby1.9.1-dev
+  gem install --no-ri --no-rdoc hiera-gpg
+fi
+
 cd "$(dirname $0)/.."
 puppet apply \
   --modulepath=modules:vendor/modules \
