@@ -8,5 +8,6 @@ puppet apply \
   --hiera_config=hiera.yaml \
   --detailed-exitcodes \
   --verbose \
+  "$@" \
   manifests/site.pp || [ $? -eq 2 ]
 exit $?

@@ -1,6 +1,6 @@
 class accounts(
   $managed = {},
-  $unmanaged = ['vagrant'],
+  $unmanaged = [],
 ) {
   validate_hash($managed)
   validate_array($unmanaged)

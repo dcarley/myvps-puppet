@@ -56,5 +56,3 @@ nginx::nginx_vhosts:
 sudo::configs:
   dan:
     content: 'dan ALL=(ALL) NOPASSWD:ALL'
-  vagrant:
-    content: 'vagrant ALL=(ALL) NOPASSWD:ALL'

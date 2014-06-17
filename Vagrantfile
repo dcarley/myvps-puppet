@@ -14,5 +14,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network "private_network", ip: "172.16.16.10"
 
-  config.vm.provision :shell, :inline => "/vagrant/tools/puppet-apply"
+  config.vm.provision :shell, :inline => "/vagrant/tools/puppet-apply --environment vagrant"
 end
