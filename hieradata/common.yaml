@@ -1,11 +1,11 @@
 ---
 
 packages:
-  - tmux
-  - irssi
   - dnsutils
-  - netcat
   - git
+  - irssi
+  - netcat
+  - tmux
   - whois
 
 classes:
