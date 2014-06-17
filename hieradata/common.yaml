@@ -15,6 +15,7 @@ classes:
   - mysql::server
   - nginx
   - php
+  - php::libs
   - private_hosting
   - ssh::client
   - ssh::server
