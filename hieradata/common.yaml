@@ -38,17 +38,14 @@ nginx::manage_repo: false
 nginx::vhost_purge: true
 nginx::nginx_vhosts:
   default:
-    listen_ip: '[::]'
     listen_options: default
     server_name: [_]
     index_files: []
     location_custom_cfg:
       return: 200
   dan.carley.co:
-    listen_ip: '[::]'
     www_root: /srv/www/dan.carley.co
   carley.co:
-    listen_ip: '[::]'
     server_name:
       - carley.co
       - www.carley.co
