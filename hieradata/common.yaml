@@ -48,7 +48,6 @@ nginx::nginx_vhosts:
   dan.carley.co:
     ipv6_enable: true
     ipv6_listen_options: ''
-    listen_options: default
     www_root: /srv/www/dan.carley.co
   carley.co:
     ipv6_enable: true
