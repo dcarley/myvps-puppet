@@ -39,6 +39,7 @@ nginx::vhost_purge: true
 nginx::nginx_vhosts:
   default:
     ipv6_enable: true
+    ipv6_listen_options: 'default'
     listen_options: default
     server_name: [_]
     index_files: []
@@ -46,9 +47,12 @@ nginx::nginx_vhosts:
       return: 200
   dan.carley.co:
     ipv6_enable: true
+    ipv6_listen_options: ''
+    listen_options: default
     www_root: /srv/www/dan.carley.co
   carley.co:
     ipv6_enable: true
+    ipv6_listen_options: ''
     server_name:
       - carley.co
       - www.carley.co
