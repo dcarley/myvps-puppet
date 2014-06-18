@@ -38,14 +38,17 @@ nginx::manage_repo: false
 nginx::vhost_purge: true
 nginx::nginx_vhosts:
   default:
+    ipv6_enable: true
     listen_options: default
     server_name: [_]
     index_files: []
     location_custom_cfg:
       return: 200
   dan.carley.co:
+    ipv6_enable: true
     www_root: /srv/www/dan.carley.co
   carley.co:
+    ipv6_enable: true
     server_name:
       - carley.co
       - www.carley.co
