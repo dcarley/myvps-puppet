@@ -4,3 +4,4 @@ hieradata/private.yaml
 .vagrant/
 .tmp/
 vendor/modules/
+vendor/bundle/

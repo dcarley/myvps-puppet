@@ -1,17 +1,14 @@
 #!/bin/bash
 set -eu
 
-if ! which puppet; then
-  apt-get install -qqy --no-reinstall ruby1.9.1 puppet hiera
-fi
-
-if ! gem list -i hiera-gpg; then
-  apt-get install -qqy --no-reinstall ruby1.9.1-dev
-  gem install --no-ri --no-rdoc hiera-gpg
+if ! which bundler; then
+  apt-get update -qq
+  apt-get install -qqy --no-reinstall bundler build-essential
 fi
 
 cd "$(dirname $0)/.."
-puppet apply \
+bundle install --path vendor/bundle
+bundle exec puppet apply \
   --modulepath=modules:vendor/modules \
   --manifestdir=manifests \
   --hiera_config=hiera.yaml \
