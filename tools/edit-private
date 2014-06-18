@@ -1,0 +1,24 @@
+#!/bin/bash
+set -eu
+
+GPG_KEY="6C506EBA"
+GPG_OPTS="--homedir=.gnupg --trust-model=always"
+
+FILE_ENCRYPTED="hieradata/private.gpg"
+FILE_PLAINTEXT="hieradata/private.yaml"
+
+delete_plaintext() {
+  rm -fP "${FILE_PLAINTEXT}"
+}
+trap delete_plaintext EXIT
+
+gpg ${GPG_OPTS} --decrypt \
+  -o "${FILE_PLAINTEXT}" \
+  "${FILE_ENCRYPTED}"
+
+vi "${FILE_PLAINTEXT}"
+
+gpg ${GPG_OPTS} --encrypt \
+  -r "${GPG_KEY}" \
+  -o "${FILE_ENCRYPTED}" \
+  "${FILE_PLAINTEXT}"
