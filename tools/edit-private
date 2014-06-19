@@ -8,7 +8,11 @@ FILE_ENCRYPTED="hieradata/private.gpg"
 FILE_PLAINTEXT="hieradata/private.yaml"
 
 delete_plaintext() {
-  rm -fP "${FILE_PLAINTEXT}"
+  if [ "$(uname -s)" = "Darwin" ]; then
+    rm -fP "${FILE_PLAINTEXT}"
+  else
+    shred -fu "${FILE_PLAINTEXT}"
+  fi
 }
 trap delete_plaintext EXIT
 
